@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-   
+   <p id="save" style="color: red;"></p>
     <div  id="open" style="display: none;">
     
 <!--     This form tag seems irrelevant    <form style="padding: 10px;">-->
@@ -32,7 +32,7 @@
             <textarea type="text" row="100" cols="50" placeholder="write here..." style="width: 80%;"></textarea>
 <!--        </form>-->
         
-        <button type="submit" onclick="myFunction();document.getElementById('open').style.display='none'">Save</button>
+        <button type="submit" onclick="myFunction();document.getElementById('open').innerHTML='';">Save</button>
         
     </div>
     
@@ -45,7 +45,7 @@
         function myFunction(){            
            var reply= document.getElementById("topic").value;
             var response= document.getElementById("speaker").value;
-    alert(reply+" "+"by"+" "+response+" "+"is saved!");
+    document.getElementById("save").innerHTML= reply+" "+"by"+" "+response+" "+"is saved!";
         }        
     </script>
  
